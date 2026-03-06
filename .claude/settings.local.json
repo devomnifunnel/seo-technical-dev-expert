@@ -1,0 +1,87 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__gtm-mcp__gtm_tag|mcp__gtm-mcp__gtm_trigger|mcp__gtm-mcp__gtm_variable",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/block-gtm-modifications.sh\""
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/block-protected-files.sh\""
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pre-compact-context.sh\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -File \"$CLAUDE_PROJECT_DIR/.claude/hooks/stop-notify.ps1\""
+          }
+        ]
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Review the completed task output. Verify: (1) findings include evidence and impact assessment, (2) recommendations include implementation specifics, (3) priority tiers are assigned correctly Critical/High/Medium/Low, (4) no placeholder or template text remains, (5) client name is consistent throughout. If any check fails, flag the specific issue. If all pass, confirm quality gate passed."
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Glob(**)",
+      "Grep(**)",
+      "Bash(git log*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git branch*)",
+      "Bash(ls *)",
+      "Bash(cat ~/.claude/settings.json)",
+      "Bash(python -m zipfile*)"
+    ],
+    "deny": [
+      "Edit(~/.ssh/**)",
+      "Edit(~/.aws/**)",
+      "Edit(~/.npmrc)",
+      "Edit(~/.env)",
+      "Edit(**/.env)",
+      "Edit(**/.env.*)",
+      "Edit(**/credentials*)",
+      "Edit(**/*.pem)",
+      "Edit(**/*.key)",
+      "Edit(**/*.pfx)",
+      "Bash(rm -rf *)",
+      "Bash(git push --force*)",
+      "Bash(git reset --hard*)",
+      "Bash(git clean -f*)"
+    ]
+  }
+}

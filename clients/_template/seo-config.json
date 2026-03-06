@@ -1,0 +1,44 @@
+{
+  "technical_seo": {
+    "robots_txt_url": "",
+    "sitemap_url": "",
+    "canonical_strategy": "",
+    "prerendering": false,
+    "prerender_service": "",
+    "spa_framework": "",
+    "server_side_rendering": false
+  },
+  "schema_markup": {
+    "organization": false,
+    "product": false,
+    "breadcrumb": false,
+    "faq": false,
+    "local_business": false,
+    "article": false,
+    "review": false
+  },
+  "tracking": {
+    "gtm_container_id": "",
+    "ga4_measurement_id": "",
+    "server_side_gtm": false
+  },
+  "performance": {
+    "lcp_baseline": "",
+    "inp_baseline": "",
+    "cls_baseline": "",
+    "pagespeed_score_mobile": "",
+    "pagespeed_score_desktop": ""
+  },
+  "content": {
+    "total_pages_indexed": "",
+    "blog_post_count": "",
+    "content_update_frequency": "",
+    "content_management_process": ""
+  },
+  "links": {
+    "referring_domains": "",
+    "domain_rating": "",
+    "internal_linking_strategy": "",
+    "disavow_file_exists": false
+  }
+}

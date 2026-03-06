@@ -1,0 +1,32 @@
+{
+  "client_name": "",
+  "website_url": "",
+  "industry": "",
+  "platform": "",
+  "ecommerce_platform": "",
+  "cms": "",
+  "hosting": "",
+  "cdn": "",
+  "analytics": {
+    "ga4_property_id": "",
+    "gsc_property": "",
+    "semrush_project": ""
+  },
+  "seo_tools": [],
+  "key_pages": {
+    "homepage": "",
+    "product_pages": [],
+    "category_pages": [],
+    "blog": "",
+    "landing_pages": []
+  },
+  "competitors": [],
+  "target_keywords": [],
+  "target_locations": [],
+  "contacts": {
+    "primary": "",
+    "developer": "",
+    "content_team": ""
+  },
+  "notes": ""
+}

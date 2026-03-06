@@ -1,0 +1,40 @@
+# Client data (sensitive)
+clients/*/
+
+# Keep template
+!clients/_template/
+
+# Environment files
+.env
+.env.*
+
+# Credentials
+credentials*
+secrets*
+*token*
+*api_key*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# Temp files
+*.tmp
+*.bak
+
+# Large output files (context-heavy, excluded from Claude Code file picker)
+*.jsonl
+
+# Minified scripts (not useful for analysis)
+scripts/chrome/*.min.js
+
+# Research transcripts (too large for context)
+research/transcripts/
