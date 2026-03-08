@@ -9,8 +9,8 @@ description: >
   This is the full content quality and strategy audit workflow covering quality scoring,
   keyword gap analysis, content cannibalization, thin content identification, and E-E-A-T assessment.
 disable-model-invocation: true
-argument-hint: "[client-name] [website-url]"
-allowed-tools: Read, Glob, Grep, Bash, WebFetch, WebSearch, Agent, Write
+argument-hint: "[URL or domain to audit]"
+allowed-tools: Read, Grep, Glob, WebSearch, WebFetch, Agent
 ---
 
 # Content Quality and Strategy Audit

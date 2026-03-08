@@ -2,6 +2,8 @@
 name: link-building
 description: "Link acquisition, backlink audits, and internal linking architecture. Use when auditing backlinks, planning outreach, or optimizing internal links. Trigger on: link building, backlinks, disavow, anchor text, internal linking, outreach, digital PR, toxic links, domain authority."
 disable-model-invocation: true
+allowed-tools: Read, Grep, Glob, WebSearch, WebFetch
+argument-hint: "[domain to analyze]"
 ---
 
 # Link Building and Management

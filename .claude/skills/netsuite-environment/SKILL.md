@@ -8,6 +8,8 @@ description: >
   navigating the NetSuite admin, or needing to know where anything lives in
   the account. This is the developer brain for this specific NetSuite instance.
   Use when exploring NetSuite account configuration, checking installed bundles, or understanding the SuiteCommerce environment. Trigger on: NetSuite account, bundles, scripts, SuiteCommerce config, account 606473.
+allowed-tools: Read, Grep, Glob
+user-invocable: false
 ---
 
 # NetSuite Environment 606473 | Operational Knowledge

@@ -8,6 +8,8 @@ description: >
   monitoring, AI search presence, or wants to know how a brand appears in AI generated answers.
   Also trigger when discussing AEO strategy, GEO optimization, or competitive AI search analysis.
   Use when checking if a brand appears in AI answers, tracking LLM mentions, or measuring AI search visibility. Trigger on: AI citations, LLM mentions, brand monitoring, AI visibility tracking.
+allowed-tools: Read, Grep, Glob, WebSearch, WebFetch
+argument-hint: "[brand name or URL]"
 ---
 
 # AI Citation Tracking and Optimization

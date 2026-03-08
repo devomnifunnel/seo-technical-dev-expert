@@ -2,6 +2,7 @@
 name: search-console
 description: "Google Search Console analysis and anomaly detection. Use when analyzing GSC data, investigating index coverage, or diagnosing ranking changes. Trigger on: Search Console, GSC, index coverage, URL inspection, search performance, impressions, clicks, CTR, ranking drop."
 allowed-tools: Read, Glob, Grep, Bash, WebSearch
+argument-hint: "[domain or property]"
 ---
 
 # Google Search Console Data Analysis

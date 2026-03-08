@@ -9,7 +9,7 @@ description: >
   client context, and Asana board status.
 disable-model-invocation: true
 argument-hint: "[client-name (optional)]"
-allowed-tools: Read, Glob, Grep, Bash
+allowed-tools: Read, Grep, Glob, Agent
 ---
 
 # Context Restoration Protocol

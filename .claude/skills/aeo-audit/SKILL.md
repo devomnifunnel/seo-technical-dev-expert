@@ -9,8 +9,8 @@ description: >
   AEO assessment workflow covering AI Overview presence, citation eligibility, entity authority,
   and conversational content readiness.
 disable-model-invocation: true
-argument-hint: "[client-name] [website-url] [brand-name] [key-products-or-services]"
-allowed-tools: Read, Glob, Grep, Bash, WebFetch, WebSearch, Agent, Write
+argument-hint: "[URL or domain to audit]"
+allowed-tools: Read, Grep, Glob, WebSearch, WebFetch, Agent
 ---
 
 # AEO (Answer Engine Optimization) Audit

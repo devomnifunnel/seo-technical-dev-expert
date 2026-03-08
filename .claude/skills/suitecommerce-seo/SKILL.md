@@ -11,6 +11,8 @@ description: >
   performance, or tracking audit on a SuiteCommerce site. If there is any chance the client
   is on NetSuite or SuiteCommerce, load this skill first.
   Trigger on: SuiteCommerce, SC Advanced, SC Standard, Summit theme, SCA SEO, NetSuite frontend, commerce categories, commerce items.
+allowed-tools: Read, Write, Edit, Bash, Grep, Glob, WebFetch
+argument-hint: "[SuiteCommerce site URL]"
 ---
 
 # SuiteCommerce SEO and Performance Skill

@@ -2,6 +2,7 @@
 name: project-eval
 description: "Validate the entire Claude Code project structure, frontmatter, hooks, settings, and references. Use when checking project health, running validation, or after making changes to project files. Trigger on: validate project, project health, run eval, check project, regression check, test project, validate skills, validate agents, smoke test."
 allowed-tools: Read, Glob, Grep, Bash
+user-invocable: false
 ---
 
 # Project Evaluation and Validation

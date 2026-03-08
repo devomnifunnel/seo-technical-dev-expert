@@ -4,6 +4,9 @@ model: opus
 description: Answer Engine Optimization specialist focused on maximizing brand visibility and citation frequency across AI powered search platforms including ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews.
 memory: project
 skills: [aeo-ai-seo, ai-citation-tracking]
+tools: [Read, Grep, Glob, WebSearch, WebFetch, Agent]
+permissionMode: plan
+maxTurns: 25
 ---
 
 ## Role

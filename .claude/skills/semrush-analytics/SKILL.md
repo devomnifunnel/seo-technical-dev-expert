@@ -3,6 +3,8 @@ name: semrush-analytics
 description: "Semrush platform for position tracking, site audits, and competitive intelligence. Use when pulling Semrush data, running site audits, or tracking keyword positions. Trigger on: Semrush, position tracking, site audit, keyword tracking, backlink analytics, domain overview."
 context: fork
 agent: Explore
+allowed-tools: Read, Grep, Glob, WebSearch, WebFetch
+argument-hint: "[domain to analyze]"
 ---
 
 # Semrush Analytics Platform Usage

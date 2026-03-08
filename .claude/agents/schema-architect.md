@@ -5,6 +5,8 @@ description: Structured data and JSON-LD specialist covering all schema types fo
 memory: project
 skills: [schema-markup]
 tools: [Read, Glob, Grep, Bash, WebFetch, WebSearch, Write, Edit]
+permissionMode: default
+maxTurns: 25
 ---
 
 ## Role

@@ -3,6 +3,9 @@ name: international-seo
 description: "URL structure, hreflang, and content localization for multi market SEO. Use when expanding internationally or fixing hreflang issues. Trigger on: hreflang, international SEO, multilingual, geo targeting, localization, ccTLD, subdomain, subfolder."
 context: fork
 disable-model-invocation: true
+allowed-tools: Read, Grep, Glob, WebSearch, WebFetch
+argument-hint: "[domain with multi-language/region]"
+agent: Explore
 ---
 
 # International and Multilingual SEO

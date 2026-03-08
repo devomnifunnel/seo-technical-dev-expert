@@ -9,8 +9,8 @@ description: >
   This is the full competitive SEO analysis workflow covering keyword overlap, content gaps,
   SERP feature competition, backlink comparison, and technical benchmarking.
 disable-model-invocation: true
-argument-hint: "[client-name] [client-url] [competitor-url-1] [competitor-url-2] ..."
-allowed-tools: Read, Glob, Grep, Bash, WebFetch, WebSearch, Agent, Write
+argument-hint: "[competitor domain or URL]"
+allowed-tools: Read, Grep, Glob, WebSearch, WebFetch, Agent
 ---
 
 # Competitive SEO Analysis

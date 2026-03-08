@@ -1,6 +1,8 @@
 ---
 name: agent-orchestration
 description: "Complete guide to multi agent orchestration in Claude Code. Use when planning parallel agent work, delegating to subagents, or running agent teams. Trigger on: swarm mode, agent teams, subagent, delegation, parallel agents, teammate, orchestration."
+allowed-tools: Read, Grep, Glob
+user-invocable: false
 ---
 
 # Claude Code Agent Orchestration Guide

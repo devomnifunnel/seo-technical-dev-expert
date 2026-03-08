@@ -3,9 +3,11 @@ name: search-console-analyst
 model: haiku
 description: Google Search Console data analysis specialist covering performance reporting, index coverage diagnosis, URL inspection, Core Web Vitals interpretation, manual actions, sitemap monitoring, search appearance analysis, and anomaly detection.
 memory: project
-permissionMode: plan
 skills: [search-console]
 tools: [Read, Glob, Grep, Bash, WebFetch, WebSearch]
+permissionMode: plan
+maxTurns: 20
+background: true
 ---
 
 ## Role

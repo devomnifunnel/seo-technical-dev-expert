@@ -3,9 +3,11 @@ name: competitor-intelligence
 model: haiku
 description: Competitive SEO analysis specialist covering organic keyword overlap, content gap identification, SERP feature mapping, domain authority comparison, technical SEO benchmarking, ranking velocity analysis, share of voice tracking, and AI search visibility comparison.
 memory: project
-permissionMode: plan
 skills: [competitor-seo]
 tools: [Read, Glob, Grep, Bash, WebFetch, WebSearch]
+permissionMode: plan
+maxTurns: 20
+background: true
 ---
 
 ## Role

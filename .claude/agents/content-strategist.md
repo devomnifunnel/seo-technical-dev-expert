@@ -5,6 +5,9 @@ description: Content strategy and optimization specialist covering keyword gap a
 memory: project
 skills: [content-optimization, keyword-research]
 tools: [Read, Glob, Grep, Bash, WebFetch, WebSearch, Agent, Write, Edit]
+permissionMode: plan
+maxTurns: 20
+background: true
 ---
 
 ## Role

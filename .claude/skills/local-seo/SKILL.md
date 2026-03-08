@@ -2,6 +2,8 @@
 name: local-seo
 description: "Google Business Profile and local search optimization. Use when optimizing for local pack, managing citations, or building local authority. Trigger on: local SEO, Google Business Profile, GBP, citations, NAP, local pack, reviews, multi location, service area."
 disable-model-invocation: true
+allowed-tools: Read, Grep, Glob, WebSearch, WebFetch
+argument-hint: "[business name or location]"
 ---
 
 # Local SEO Optimization

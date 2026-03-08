@@ -10,8 +10,8 @@ description: >
   SEO dimension: technical, content, AI search, page speed, links, schema, search console,
   and competitive positioning.
 disable-model-invocation: true
-argument-hint: "[client-name] [website-url]"
-allowed-tools: Read, Glob, Grep, Bash, WebFetch, WebSearch, Agent, Write
+argument-hint: "[domain or client name]"
+allowed-tools: Read, Grep, Glob, Agent
 ---
 
 # Full SEO Audit

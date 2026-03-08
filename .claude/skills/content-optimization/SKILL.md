@@ -1,6 +1,8 @@
 ---
 name: content-optimization
 description: "On page SEO and content quality optimization. Use when reviewing title tags, meta descriptions, heading structure, E-E-A-T scoring, or content freshness. Trigger on: on page SEO, title tag, meta description, headings, E-E-A-T, content quality, thin content, content decay, featured snippets."
+allowed-tools: Read, Grep, Glob, WebSearch, WebFetch
+argument-hint: "[URL or page to optimize]"
 ---
 
 # On Page SEO and Content Optimization

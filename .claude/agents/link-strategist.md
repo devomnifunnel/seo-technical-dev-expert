@@ -5,6 +5,9 @@ description: Link building and backlink profile specialist covering backlink aud
 memory: project
 skills: [link-building]
 tools: [Read, Glob, Grep, Bash, WebFetch, WebSearch, Write, Edit]
+permissionMode: plan
+maxTurns: 20
+background: true
 ---
 
 ## Role

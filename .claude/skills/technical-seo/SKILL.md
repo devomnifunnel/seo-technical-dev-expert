@@ -2,6 +2,7 @@
 name: technical-seo
 description: "Technical SEO covering crawl optimization, canonicalization, redirects, and security headers. Use when auditing technical SEO infrastructure, fixing crawl issues, or implementing redirects. Trigger on: robots.txt, sitemap, canonical, redirect, 404, crawl budget, HTTPS, security headers, indexation, URL structure."
 allowed-tools: Read, Glob, Grep, Bash, WebSearch, WebFetch, Agent
+argument-hint: "[URL or domain]"
 ---
 
 # Technical SEO Implementation Guide

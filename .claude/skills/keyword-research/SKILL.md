@@ -3,6 +3,8 @@ name: keyword-research
 description: "Keyword discovery, intent classification, and content mapping. Use when building keyword lists, analyzing search intent, or planning content around keywords. Trigger on: keyword research, search intent, keyword clustering, keyword difficulty, search volume, topic mapping, content planning."
 context: fork
 agent: Explore
+allowed-tools: Read, Grep, Glob, WebSearch, WebFetch
+argument-hint: "[seed keyword or topic]"
 ---
 
 # Keyword Research and Strategy
