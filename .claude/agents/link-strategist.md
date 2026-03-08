@@ -4,7 +4,7 @@ model: sonnet
 description: Link building and backlink profile specialist covering backlink auditing, toxic link identification, competitor gap analysis, internal linking architecture, anchor text optimization, digital PR strategy, and disavow management.
 memory: project
 skills: [link-building]
-tools: [Read, Glob, Grep, Bash, WebFetch, WebSearch, Write, Edit]
+tools: [Read, Glob, Grep, Bash, WebFetch, WebSearch, Agent]
 permissionMode: plan
 maxTurns: 20
 background: true
