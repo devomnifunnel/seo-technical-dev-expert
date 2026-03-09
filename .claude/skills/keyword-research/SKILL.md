@@ -3,7 +3,7 @@ name: keyword-research
 description: "Keyword discovery, intent classification, and content mapping. Use when building keyword lists, analyzing search intent, or planning content around keywords. Trigger on: keyword research, search intent, keyword clustering, keyword difficulty, search volume, topic mapping, content planning."
 context: fork
 agent: Explore
-allowed-tools: Read, Grep, Glob, WebSearch, WebFetch
+allowed-tools: Read, Grep, Glob, WebSearch, WebFetch, mcp__semrush__
 argument-hint: "[seed keyword or topic]"
 ---
 

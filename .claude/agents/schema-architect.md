@@ -4,7 +4,7 @@ model: sonnet
 description: Structured data and JSON-LD specialist covering all schema types for ecommerce, local business, content sites, and rich result eligibility including Product, Organization, FAQ, HowTo, Article, BreadcrumbList, Review, Video, and Event markup.
 memory: project
 skills: [schema-markup]
-tools: [Read, Glob, Grep, Bash, WebFetch, WebSearch, Write, Edit]
+tools: [Read, Glob, Grep, Bash, WebFetch, WebSearch, Write, Edit, mcp__lighthouse__]
 permissionMode: default
 maxTurns: 25
 ---

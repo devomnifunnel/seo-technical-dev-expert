@@ -1,7 +1,7 @@
 ---
 name: technical-seo
 description: "Technical SEO covering crawl optimization, canonicalization, redirects, and security headers. Use when auditing technical SEO infrastructure, fixing crawl issues, or implementing redirects. Trigger on: robots.txt, sitemap, canonical, redirect, 404, crawl budget, HTTPS, security headers, indexation, URL structure."
-allowed-tools: Read, Glob, Grep, Bash, WebSearch, WebFetch, Agent
+allowed-tools: Read, Glob, Grep, Bash, WebSearch, WebFetch, Agent, mcp__google-search-console__, mcp__lighthouse__, mcp__pagespeed__
 argument-hint: "[URL or domain]"
 ---
 
@@ -23,11 +23,13 @@ Use `${CLAUDE_SKILL_DIR}/scripts/chrome/<script>.js` to reference these scripts 
 
 ## Dynamic Context
 
-When invoked with a URL ($ARGUMENTS), use available MCP tools to gather live data:
-- Lighthouse MCP: run full audit for crawlability, security headers, and technical issues
-- Fetch MCP: extract page content as clean markdown for analysis
-- Chrome DevTools MCP: check network requests, JS errors, and rendering behavior
-- Chrome MCP: navigate to the URL and inspect live DOM, meta tags, and schema
+When invoked with a URL ($ARGUMENTS), use available MCP tools to gather live data (load via ToolSearch first):
+- `mcp__lighthouse__run_audit`: Full Lighthouse audit for crawlability, security headers, and technical issues
+- `mcp__pagespeed__analyze_pagespeed`: Google PageSpeed Insights for CWV field + lab data
+- `mcp__google-search-console__index_inspect`: Check URL indexing status in Google
+- `mcp__google-search-console__list_sitemaps`: Verify sitemap status for the property
+- Chrome DevTools MCP (`mcp__chrome-devtools__*`): check network requests, JS errors, and rendering behavior
+- Chrome MCP (`mcp__claude-in-chrome__*`): navigate to the URL and inspect live DOM, meta tags, and schema
 
 ## Crawl Optimization
 

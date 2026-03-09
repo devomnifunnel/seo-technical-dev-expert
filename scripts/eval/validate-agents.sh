@@ -77,6 +77,12 @@ for agent_file in "${AGENT_FILES[@]}"; do
     fi
   fi
 
+  # Check for background + plan conflict (background agents auto-deny permission prompts)
+  bg_val="$(get_field "$fm" "background")"
+  if [ "$bg_val" = "true" ] && [ "$perm_val" = "plan" ]; then
+    fail "$agent_name: background=true conflicts with permissionMode=plan (background agents auto-deny prompts)"
+  fi
+
 done
 
 summary "AGENTS"

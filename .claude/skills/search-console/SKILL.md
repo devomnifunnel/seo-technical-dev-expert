@@ -1,11 +1,24 @@
 ---
 name: search-console
 description: "Google Search Console analysis and anomaly detection. Use when analyzing GSC data, investigating index coverage, or diagnosing ranking changes. Trigger on: Search Console, GSC, index coverage, URL inspection, search performance, impressions, clicks, CTR, ranking drop."
-allowed-tools: Read, Glob, Grep, Bash, WebSearch
+allowed-tools: Read, Glob, Grep, Bash, WebSearch, mcp__google-search-console__, mcp__google-analytics__
 argument-hint: "[domain or property]"
 ---
 
 # Google Search Console Data Analysis
+
+## MCP Tools Available
+
+Use these MCP tools for direct GSC API access (load via ToolSearch first):
+- `mcp__google-search-console__list_sites`: List all verified properties
+- `mcp__google-search-console__search_analytics`: Pull performance data (clicks, impressions, CTR, position)
+- `mcp__google-search-console__enhanced_search_analytics`: Advanced query with filters and dimensions
+- `mcp__google-search-console__detect_quick_wins`: Find striking distance keywords automatically
+- `mcp__google-search-console__index_inspect`: Check URL indexing status
+- `mcp__google-search-console__list_sitemaps` / `mcp__google-search-console__get_sitemap`: Sitemap status
+- `mcp__google-search-console__submit_sitemap`: Submit sitemap (requires Michael's approval)
+
+For cross referencing with traffic data, use `mcp__google-analytics__run_report` and `mcp__google-analytics__get_property_details`.
 
 ## Performance Report Analysis
 
@@ -309,105 +322,8 @@ Monitor for significant position changes:
 
 ## GSC API
 
-### Query Parameters for Programmatic Analysis
-
-```python
-# Google Search Console API - Python example
-from googleapiclient.discovery import build
-from google.oauth2 import service_account
-
-SCOPES = ['https://www.googleapis.com/auth/webmasters.readonly']
-SERVICE_ACCOUNT_FILE = 'service-account-key.json'
-
-credentials = service_account.Credentials.from_service_account_file(
-    SERVICE_ACCOUNT_FILE, scopes=SCOPES
-)
-service = build('searchconsole', 'v1', credentials=credentials)
-
-# Query performance data
-request = {
-    'startDate': '2026-02-01',
-    'endDate': '2026-02-28',
-    'dimensions': ['query', 'page', 'device'],
-    'dimensionFilterGroups': [{
-        'filters': [{
-            'dimension': 'country',
-            'expression': 'usa'
-        }]
-    }],
-    'rowLimit': 25000,
-    'startRow': 0,
-    'type': 'web'
-}
-
-response = service.searchanalytics().query(
-    siteUrl='https://example.com',
-    body=request
-).execute()
-
-for row in response.get('rows', []):
-    query = row['keys'][0]
-    page = row['keys'][1]
-    device = row['keys'][2]
-    clicks = row['clicks']
-    impressions = row['impressions']
-    ctr = row['ctr']
-    position = row['position']
-    print(f"{query} | {page} | {device} | {clicks} | {impressions} | {ctr:.2%} | {position:.1f}")
-```
-
-### Available Dimensions
-
-| Dimension | Values | Notes |
-|-----------|--------|-------|
-| query | Search query text | Cannot combine with searchAppearance |
-| page | Full URL | |
-| device | DESKTOP, MOBILE, TABLET | |
-| country | 3 letter country code | |
-| date | YYYY-MM-DD | |
-| searchAppearance | RICH_RESULT, etc. | Cannot combine with query |
-
-### Date Range Limits
-
-- Maximum date range: 16 months of historical data
-- Freshest data: typically 2 to 3 days lag
-- Row limit per request: 25,000 (use startRow for pagination)
-- API quota: 1,200 queries per minute per project
-
-### Useful API Query Patterns
-
-**Striking distance report**:
-```python
-# Queries in position 5-15 with high impressions
-request = {
-    'startDate': '2026-02-01',
-    'endDate': '2026-02-28',
-    'dimensions': ['query', 'page'],
-    'dimensionFilterGroups': [{
-        'filters': [
-            {'dimension': 'query', 'operator': 'excludingRegex', 'expression': 'brand_name'},
-        ]
-    }],
-    'rowLimit': 25000
-}
-# Post-filter in code: position between 5 and 15, impressions > 100
-```
-
-**Page level performance trend**:
-```python
-# Daily performance for a specific page
-request = {
-    'startDate': '2026-01-01',
-    'endDate': '2026-02-28',
-    'dimensions': ['date'],
-    'dimensionFilterGroups': [{
-        'filters': [{
-            'dimension': 'page',
-            'expression': 'https://example.com/important-page'
-        }]
-    }]
-}
-```
+For Python code examples, query patterns, available dimensions, and date range limits, see:
+`$CLAUDE_SKILL_DIR/references/gsc-api-examples.md`
 
 ## Manual Actions and Security Issues
 

@@ -4,7 +4,7 @@ model: opus
 description: NetSuite SuiteCommerce SEO specialist covering SPA rendering, prerendering strategies, URL structure optimization, SuiteScript SEO automation, faceted navigation management, and product schema implementation.
 memory: project
 skills: [netsuite-seo, suitecommerce-seo, netsuite-environment]
-tools: [Read, Write, Edit, Bash, Grep, Glob, WebSearch, Agent]
+tools: [Read, Write, Edit, Bash, Grep, Glob, WebSearch, Agent, mcp__google-search-console__, mcp__lighthouse__]
 permissionMode: default
 maxTurns: 30
 ---

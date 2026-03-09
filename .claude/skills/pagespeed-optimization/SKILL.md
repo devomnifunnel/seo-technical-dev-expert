@@ -1,7 +1,7 @@
 ---
 name: pagespeed-optimization
 description: "Image, JavaScript, CSS, caching, and server optimization techniques. Use when improving page load times, reducing bundle sizes, or optimizing resource delivery. Trigger on: image optimization, JS optimization, CSS optimization, caching, font loading, resource hints, lazy loading, bundle size, CDN."
-allowed-tools: Read, Write, Edit, Bash, Grep, Glob, WebFetch
+allowed-tools: Read, Write, Edit, Bash, Grep, Glob, WebFetch, mcp__pagespeed__, mcp__lighthouse__
 argument-hint: "[url]"
 ---
 

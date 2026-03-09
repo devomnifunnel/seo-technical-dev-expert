@@ -4,7 +4,7 @@ model: opus
 description: Specialist agent for comprehensive technical SEO audits covering crawlability, indexation, rendering, performance, and security across all site architectures including SuiteCommerce SPAs.
 memory: project
 skills: [technical-seo, core-web-vitals, schema-markup]
-tools: [Read, Grep, Glob, Bash, WebSearch, WebFetch, Agent]
+tools: [Read, Grep, Glob, Bash, WebSearch, WebFetch, Agent, mcp__google-search-console__, mcp__lighthouse__, mcp__pagespeed__]
 permissionMode: plan
 maxTurns: 30
 ---

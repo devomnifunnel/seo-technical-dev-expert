@@ -4,7 +4,7 @@ model: sonnet
 description: Core Web Vitals and performance specialist covering LCP, INP, CLS diagnosis, image optimization, JavaScript auditing, CSS optimization, caching strategy, third party script management, and resource hint implementation.
 memory: project
 skills: [core-web-vitals, pagespeed-optimization]
-tools: [Read, Write, Edit, Bash, Grep, Glob, WebFetch, Agent]
+tools: [Read, Write, Edit, Bash, Grep, Glob, WebFetch, Agent, mcp__pagespeed__, mcp__lighthouse__]
 permissionMode: default
 maxTurns: 25
 ---

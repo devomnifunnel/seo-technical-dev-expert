@@ -23,12 +23,13 @@ When in doubt, stop and ask. Never assume approval.
 - Managing all internal project files (skills, frameworks, scripts, templates)
 
 ## Asana Protocol (non negotiable, every session)
-Board: "Claude" (GID: 1213561988868639, workspace: 1206269095077183)
-Sections: Active Client Work (1213563254857599), Audits & Analysis (1213533330666074), Tracking & Implementation (1213533330648841), Reporting & Deliverables (1213563254870417), Infrastructure & Tools (1213563259658898), Research & Learning (1213533330676288), Backlog (1213563254874568)
-1. **Session start**: Read the board, resume any in progress work.
-2. **When starting work**: Create task immediately. "[Client]: [What]" or "Infrastructure: [What]". Correct section. Scope in notes.
-3. **During work**: Add meaningful comments with specific data (IDs, scores, URLs). On completion, update notes with full summary, mark complete, create follow up tasks if needed.
-4. **Subtasks**: Create for multi phase work. Mirror updates to client memory and MEMORY.md.
+Board: "Claude" (GID: 1213561988868639, workspace: 1206269095077183). Use mcp__claude_ai_Asana__ connector only.
+Parent tasks = clients. Each client has a permanent parent task that never closes. All work for a client lives as subtasks under their parent task.
+1. **Session start**: Read the board. For any client being worked on, read the parent task and its subtasks for full context before engaging.
+2. **When starting client work**: Create a subtask under the client's parent task. Name it descriptively. Add scope in notes. For non client work (infrastructure, research, OFM internal), create standalone tasks in the Internal section.
+3. **During work**: Add meaningful comments with specific data (IDs, scores, URLs). On completion, update notes with full summary, mark subtask complete, create follow up subtasks if needed.
+4. **Verification workflow**: When a subtask is verified or validated (via MCP, API, Chrome, live inspection, or any tool), add a comment to the subtask documenting: (a) what was checked and how, (b) why we are confident it is complete, (c) actual proof (metric values, API responses, test results, screenshots). This creates an auditable record that the work was not just completed but verified correct.
+5. **Mirror updates**: Sync findings and decisions to client memory in clients/ and MEMORY.md.
 
 ## Client Memory Protocol
 When a client is mentioned: (1) check clients/ for existing folder, (2) read full history before engaging or create folder silently. Track findings, decisions, and open items. Draft memory update at session end for Michael to confirm.
@@ -44,7 +45,7 @@ When a client is mentioned: (1) check clients/ for existing folder, (2) read ful
 
 ## Agency and Stack
 
-OmniFunnel Marketing (OFM) — boutique agency, growth partner not vendor. Core SEO stack: Google Search Console, Semrush, Google PageSpeed Insights, GA4 | Ecommerce: NetSuite/SuiteCommerce Advanced | Tags: GTM client + server side | Browser: Chrome MCP connected for live UI navigation and site analysis
+OmniFunnel Marketing (OFM) — boutique agency, growth partner not vendor. Core SEO stack: Google Search Console (mcp__google-search-console__), Semrush (mcp__semrush__), PageSpeed Insights (mcp__pagespeed__), Lighthouse (mcp__lighthouse__), GA4 (mcp__google-analytics__), Google Ads (mcp__google-ads__) | Ecommerce: NetSuite/SuiteCommerce Advanced | Tags: GTM client + server side | Browser: Chrome (mcp__claude-in-chrome__, mcp__chrome-devtools__) | Project: Asana (mcp__claude_ai_Asana__), Zapier (mcp__claude_ai_Zapier__)
 
 ## Key Specializations
 

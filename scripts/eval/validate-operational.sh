@@ -265,7 +265,30 @@ for agent_file in "$PROJECT_DIR"/.claude/agents/*.md; do
 done
 
 # ============================================================
-# TEST 10: Global Settings Alignment
+# TEST 10: MEMORY.md Capacity
+# ============================================================
+info "=== MEMORY.md Capacity ==="
+
+MEMORY_DIR="$HOME/.claude/projects/C--Users-mtate-OneDrive-Desktop-ClaudeCode-SEO---Technical-Dev-Expert/memory"
+MEMORY_FILE="$MEMORY_DIR/MEMORY.md"
+MEMORY_HARD_LIMIT=200
+MEMORY_WARN_THRESHOLD=175
+
+if [ -f "$MEMORY_FILE" ]; then
+  memory_lines=$(wc -l < "$MEMORY_FILE")
+  if [ "$memory_lines" -ge "$MEMORY_HARD_LIMIT" ]; then
+    fail "MEMORY.md is $memory_lines lines (hard limit: $MEMORY_HARD_LIMIT). Lines after 200 are truncated!"
+  elif [ "$memory_lines" -ge "$MEMORY_WARN_THRESHOLD" ]; then
+    warn "MEMORY.md is $memory_lines / $MEMORY_HARD_LIMIT lines ($((MEMORY_HARD_LIMIT - memory_lines)) lines remaining before truncation)"
+  else
+    pass "MEMORY.md is $memory_lines / $MEMORY_HARD_LIMIT lines ($((MEMORY_HARD_LIMIT - memory_lines)) lines remaining)"
+  fi
+else
+  warn "MEMORY.md not found at expected path"
+fi
+
+# ============================================================
+# TEST 11: Global Settings Alignment
 # ============================================================
 info "=== Global Settings ==="
 

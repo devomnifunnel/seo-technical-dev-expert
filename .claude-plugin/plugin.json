@@ -1,0 +1,7 @@
+{
+  "name": "seo-technical-dev-expert",
+  "description": "SEO and Technical Development expert system for OmniFunnel Marketing. Covers technical SEO, NetSuite SuiteCommerce, AEO/AI search optimization, Core Web Vitals, schema markup, and full audit workflows.",
+  "version": "1.0.0",
+  "skills": "./.claude/skills/",
+  "agents": "./.claude/agents/"
+}

@@ -2,7 +2,7 @@
 name: core-web-vitals
 description: "Diagnosing and optimizing LCP, INP, and CLS with code examples. Use when performance is poor, Core Web Vitals are failing, or page speed needs improvement. Trigger on: Core Web Vitals, CWV, LCP, INP, CLS, page speed, performance budget, TTFB, slow pages, Lighthouse score."
 argument-hint: "[URL to analyze]"
-allowed-tools: Read, Write, Edit, Bash, Grep, Glob, WebFetch
+allowed-tools: Read, Write, Edit, Bash, Grep, Glob, WebFetch, mcp__pagespeed__, mcp__lighthouse__
 ---
 
 # Core Web Vitals Diagnosis and Optimization

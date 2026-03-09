@@ -4,8 +4,8 @@ model: sonnet
 description: Content strategy and optimization specialist covering keyword gap analysis, search intent mapping, content architecture, quality scoring, and E-E-A-T assessment for organic growth.
 memory: project
 skills: [content-optimization, keyword-research]
-tools: [Read, Glob, Grep, Bash, WebFetch, WebSearch, Agent]
-permissionMode: plan
+tools: [Read, Glob, Grep, Bash, WebFetch, WebSearch, Agent, mcp__semrush__, mcp__google-analytics__]
+permissionMode: default
 maxTurns: 20
 background: true
 ---

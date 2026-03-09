@@ -3,7 +3,7 @@ name: competitor-seo
 description: "Systematic competitor analysis for SEO strategy. Use when identifying competitors, analyzing keyword gaps, comparing backlink profiles, or benchmarking rankings. Trigger on: competitor analysis, keyword gap, content gap, share of voice, SERP overlap, competitive audit."
 context: fork
 agent: Explore
-allowed-tools: Read, Grep, Glob, WebSearch, WebFetch
+allowed-tools: Read, Grep, Glob, WebSearch, WebFetch, mcp__semrush__, mcp__google-ads__
 argument-hint: "[competitor domain]"
 ---
 
