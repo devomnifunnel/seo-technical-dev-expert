@@ -68,6 +68,7 @@ VALIDATORS=(
   "Hooks|$SCRIPT_DIR/validate-hooks.sh"
   "Settings|$SCRIPT_DIR/validate-settings.sh"
   "References|$SCRIPT_DIR/validate-refs.sh"
+  "Operational|$SCRIPT_DIR/validate-operational.sh"
 )
 
 # Quick mode skips hook functional tests

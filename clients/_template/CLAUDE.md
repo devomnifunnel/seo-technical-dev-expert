@@ -9,6 +9,11 @@ Platform: [Platform details]
 ## Current Priorities
 - [Active work items]
 
+## SEO Strategy Summary
+- [Target keywords, content focus, technical priorities]
+- [Competitive positioning, link building approach]
+
 ## Files
 - Full profile: profile.md
 - Session history: history.md
+- SEO strategy: strategy.md

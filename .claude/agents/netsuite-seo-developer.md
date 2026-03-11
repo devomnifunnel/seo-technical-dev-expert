@@ -5,7 +5,7 @@ description: NetSuite SuiteCommerce SEO specialist covering SPA rendering, prere
 memory: project
 skills: [netsuite-seo, suitecommerce-seo, netsuite-environment]
 tools: [Read, Write, Edit, Bash, Grep, Glob, WebSearch, Agent, mcp__google-search-console__, mcp__lighthouse__]
-permissionMode: default
+permissionMode: plan
 maxTurns: 30
 ---
 

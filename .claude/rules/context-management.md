@@ -30,7 +30,9 @@ These rules govern efficient context usage to maintain peak performance througho
 
 ## Compaction Protocol
 
-- **Compact proactively at 70 to 80% fill**, not waiting for auto compact at 95%.
+- **Compact proactively at 50 to 60% fill**, not waiting for auto compact at 95%.
+  Sessions start at ~42 to 50k tokens (21 to 25% of 200k) before any work begins.
+  At 50% fill (100k tokens), you have used about 50k of working context. Quality degrades beyond this.
 - **PreCompact hook preserves critical context** automatically (client name, project rules,
   Asana GIDs, reference architecture paths). Do not rely solely on this.
 - **After compaction**, verify key context by checking: which client are we working with,

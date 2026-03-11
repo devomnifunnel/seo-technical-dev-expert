@@ -1,5 +1,27 @@
 {
   "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/user-prompt-flags.sh\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "mcp__",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/post-tool-validate.sh\""
+          }
+        ]
+      }
+    ],
     "PreToolUse": [
       {
         "matcher": "mcp__gtm-mcp__gtm_tag|mcp__gtm-mcp__gtm_trigger|mcp__gtm-mcp__gtm_variable",
@@ -7,6 +29,33 @@
           {
             "type": "command",
             "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/block-gtm-modifications.sh\""
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__claude_ai_Zapier__google_ads_set_*|mcp__claude_ai_Zapier__google_ads_add_*|mcp__claude_ai_Zapier__google_ads_create_*|mcp__claude_ai_Zapier__google_ads_send_*|mcp__claude_ai_Zapier__google_ads_remove_*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/block-zapier-writes.sh\""
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__claude_ai_Zapier__activecampaign_create_*|mcp__claude_ai_Zapier__activecampaign_update_*|mcp__claude_ai_Zapier__activecampaign_add_*|mcp__claude_ai_Zapier__activecampaign_remove_*|mcp__claude_ai_Zapier__activecampaign_subscribe_*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/block-zapier-writes.sh\""
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__claude_ai_Zapier__microsoft_outlook_send_*|mcp__claude_ai_Zapier__microsoft_outlook_reply_*|mcp__claude_ai_Zapier__microsoft_outlook_delete_*|mcp__claude_ai_Zapier__microsoft_outlook_create_event",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/block-zapier-writes.sh\""
           }
         ]
       },
@@ -37,7 +86,23 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell -ExecutionPolicy Bypass -File \"$CLAUDE_PROJECT_DIR/.claude/hooks/stop-notify.ps1\""
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/check-complete.sh\""
+          },
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -File \"$CLAUDE_PROJECT_DIR/.claude/hooks/stop-notify.ps1\"",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/session-start-context.sh\""
           }
         ]
       }
@@ -68,6 +133,12 @@
       "Bash(python -m zipfile*)"
     ],
     "deny": [
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/credentials*)",
+      "Read(**/secrets*)",
       "Edit(~/.ssh/**)",
       "Edit(~/.aws/**)",
       "Edit(~/.npmrc)",

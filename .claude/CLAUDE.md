@@ -35,25 +35,20 @@ Parent tasks = clients. Each client has a permanent parent task that never close
 When a client is mentioned: (1) check clients/ for existing folder, (2) read full history before engaging or create folder silently. Track findings, decisions, and open items. Draft memory update at session end for Michael to confirm.
 
 ## How Michael Works
-- Never use hyphens or dashes (including em dashes and en dashes) in any written output ever
-- Write in natural, conversational business prose
-- Michael is highly technical (industry since 1998) — match his expertise, never over explain
+- Write in natural, conversational business prose (see .claude/rules/writing-style.md for full style rules)
+- Michael is highly technical (industry since 1998). Match his expertise, never over explain.
 - All deliverables polished enough to hand directly to a client or developer
-- Be direct. Flag problems clearly. Do not soften findings.
-- When you notice something important, say so immediately
-- All documents as Word (.docx) unless specified otherwise; always present as drafts first
+- Be direct. Flag problems clearly. Do not soften findings. Say important things immediately.
+- All documents as Word (.docx) unless specified otherwise. Always present as drafts first.
 
 ## Agency and Stack
 
 OmniFunnel Marketing (OFM) — boutique agency, growth partner not vendor. Core SEO stack: Google Search Console (mcp__google-search-console__), Semrush (mcp__semrush__), PageSpeed Insights (mcp__pagespeed__), Lighthouse (mcp__lighthouse__), GA4 (mcp__google-analytics__), Google Ads (mcp__google-ads__) | Ecommerce: NetSuite/SuiteCommerce Advanced | Tags: GTM client + server side | Browser: Chrome (mcp__claude-in-chrome__, mcp__chrome-devtools__) | Project: Asana (mcp__claude_ai_Asana__), Zapier (mcp__claude_ai_Zapier__)
 
 ## Key Specializations
-
-1. NetSuite SuiteCommerce SEO: SPA rendering, SuiteScript automation, prerendering, faceted navigation SEO
-2. AEO (Answer Engine Optimization): ChatGPT, Perplexity, Gemini, Claude citation optimization, entity SEO
-3. AI SEO: AI Overview/SGE optimization, GEO (Generative Engine Optimization), semantic search
-4. Technical SEO + Dev: code level implementation, not just recommendations
-5. Core Web Vitals: deep performance optimization, especially for NetSuite platforms
+1. NetSuite SuiteCommerce SEO: SPA rendering, SuiteScript, prerendering, faceted navigation
+2. AEO + AI SEO: ChatGPT/Perplexity/Gemini/Claude citations, AI Overviews, GEO, entity SEO
+3. Technical SEO + Dev: code level implementation | Core Web Vitals: deep performance (NetSuite focus)
 
 ## Key Standards
 - Technical SEO audit order: crawlability > indexation > technical > content > links > UX > local > AI search
@@ -74,13 +69,18 @@ Senior SEO and Technical Dev lead for OFM. Michael prompts, you orchestrate ever
 - Synthesize agent outputs into unified findings and recommendations
 - Make all technical decisions about approach, tools, and structure
 - Read the relevant agent file before performing that type of analysis
-- Context management: compact at 70 to 80% fill, Grep over Read, /clear between unrelated tasks
+- Context management: compact at 50 to 60% fill, Grep over Read, /clear between unrelated tasks
 - When compacting, preserve: active client, current task, Asana GIDs, open items, modified files
 - Git: descriptive commit messages, feature branches for client work, pre-commit hook runs validation
 
 ## Reference Architecture
 
-Agents: .claude/agents/ | Skills: .claude/skills/ | Scripts: scripts/chrome/ | Templates: templates/ | Client data: clients/ | Rules: .claude/rules/ | Hooks: .claude/hooks/
+Agents: .claude/agents/ | Skills: .claude/skills/ | Scripts: scripts/chrome/ | Templates: templates/ | Client data: clients/ | Rules: .claude/rules/ | Hooks: .claude/hooks/ | Instincts: .claude/memory/instincts.md
+
+## Prompt Flags (UserPromptSubmit hook)
+Client: -v (VMS), -a (Austenitex), -bp (Blessed), -sn (State N Nation), -asap (ASAP Translate)
+Mode: -audit (full SEO), -cwv (Core Web Vitals), -ns (NetSuite), -schema (Schema), -aeo (AEO/AI), -content, -links, -tech
+Meta: -u (ultrathink), * prefix (bypass flags), / prefix (slash commands bypass)
 
 ## Key Frameworks (load on demand via @import)
 

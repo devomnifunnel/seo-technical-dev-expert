@@ -30,26 +30,6 @@ code generation, dependency management, and external communications.
 - Suggest moving secrets to environment variables or a secret management service.
 - Never log, copy, or transmit discovered credentials. Report only their location and type.
 
-## Git Safety
-
-- **No force push**: Never execute `git push --force` or `git push -f` without explicit user
-  approval. Explain the risks before proceeding if the user requests it.
-- **No hard reset**: Never execute `git reset --hard` without explicit user approval. Offer
-  safer alternatives such as `git stash` or creating a backup branch first.
-- **No destructive operations**: `git clean -f`, `git checkout -- .`, `git restore .` all
-  require explicit user confirmation.
-- **Branch protection**: Never push directly to `main` or `master` without confirmation.
-  Recommend creating a feature branch for all changes.
-
-## Commit Hygiene
-
-- **No secrets in commits**: Before staging files, check for `.env`, credential files, or
-  files matching secret patterns. Exclude them from staging.
-- Ensure `.gitignore` includes standard secret exclusion patterns:
-  - `.env`, `.env.*`, `*.pem`, `*.key`, `node_modules/`, `credentials/`
-- If a `.gitignore` is missing or lacks these patterns, recommend adding them before committing.
-- Review staged diffs for hardcoded secrets before creating any commit.
-
 ## Dependency Management
 
 - **Typosquatting protection**: When installing packages, verify the package name matches the

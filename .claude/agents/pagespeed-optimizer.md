@@ -5,7 +5,7 @@ description: Core Web Vitals and performance specialist covering LCP, INP, CLS d
 memory: project
 skills: [core-web-vitals, pagespeed-optimization]
 tools: [Read, Write, Edit, Bash, Grep, Glob, WebFetch, Agent, mcp__pagespeed__, mcp__lighthouse__]
-permissionMode: default
+permissionMode: plan
 maxTurns: 25
 ---
 

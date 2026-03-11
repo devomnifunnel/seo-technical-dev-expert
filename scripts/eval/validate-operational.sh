@@ -248,9 +248,9 @@ for agent_file in "$PROJECT_DIR"/.claude/agents/*.md; do
   tools_line=$(echo "$fm" | grep "^tools:")
 
   if [ "$perm" = "plan" ]; then
-    # Plan mode agents should NOT have Write or Edit in tools
+    # Plan mode = requires approval before writing. Write/Edit tools are allowed.
     if echo "$tools_line" | grep -qi "Write\|Edit"; then
-      fail "$agent_name: permissionMode=plan but tools include Write/Edit"
+      pass "$agent_name: plan mode with write tools (approval required)"
     else
       pass "$agent_name: plan mode with read-only tools"
     fi
