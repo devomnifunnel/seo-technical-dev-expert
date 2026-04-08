@@ -1,4 +1,57 @@
 {
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Glob(**)",
+      "Grep(**)",
+      "Bash(git log*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git branch*)",
+      "Bash(ls *)",
+      "Bash(cat ~/.claude/settings.json)",
+      "Bash(python -m zipfile*)",
+      "mcp__plugin_asana_asana__asana_get_task",
+      "WebFetch(domain:docs.google.com)",
+      "WebFetch(domain:doc-10-1k-docstext.googleusercontent.com)",
+      "WebFetch(domain:doc-04-b0-docstext.googleusercontent.com)",
+      "Bash(find /Users/jd/tate/seo-technical-dev-expert -type f -name \"manifest.json\" -exec grep -l \"application\\\\|checkout\\\\|shopping\" {} \\\\; | head -10)",
+      "Bash(grep -r \"environment\\\\|shortcache\" /Users/jd/tate/seo-technical-dev-expert/suitecommerce --include=\"*.ss\" --include=\"*.js\" 2>/dev/null | grep -v node_modules | head -20)",
+      "Bash(find /Users/jd/tate/seo-technical-dev-expert/suitecommerce -type f -name \"*.ssp*\" 2>/dev/null | head -10)",
+      "Bash(find /Users/jd/tate/seo-technical-dev-expert -path \"*ssp*\" -o -path \"*ShortCache*\" 2>/dev/null | head -15)",
+      "Bash(find /Users/jd/tate/seo-technical-dev-expert -type d -name \"*ssp*\" 2>/dev/null | head -10)",
+      "Bash(grep -r \"CATEGORIES\\\\|SC\\\\\\\\.CATEGORIES\" /Users/jd/tate/seo-technical-dev-expert --include=\"*.json\" --include=\"*.js\" 2>/dev/null | grep -v node_modules | head -20)",
+      "Bash(grep -r \"application\\\\|checkout\\\\|shopping\" /Users/jd/tate/seo-technical-dev-expert/suitecommerce/extensions --include=\"*.js\" 2>/dev/null | grep -i \"config\\\\|request\\\\|environment\" | head -20)",
+      "Bash(grep -r \"SC\\\\\\\\.CATEGORIES\\\\|SC\\\\\\\\.ITEMS\\\\|SC\\\\\\\\.ENVIRONMENT\" /Users/jd/tate/seo-technical-dev-expert --include=\"*.js\" --include=\"*.json\" 2>/dev/null | grep -v node_modules | head -25)",
+      "Bash(grep -rn \"SC\\\\.CATEGORIES\\\\|CATEGORIES\" /Users/jd/tate/seo-technical-dev-expert/suitecommerce --include=\"*.js\" 2>/dev/null | grep -v node_modules | head -20)",
+      "Bash(grep -r \"CheckoutWizard\\\\|checkout.*wizard\\\\|OrderWizard.*config\\\\|SCConfiguration\" /Users/jd/tate/seo-technical-dev-expert/suitecommerce/extensions/Workspace --include=\"*.js\" --include=\"*.ss\" 2>/dev/null | grep -v node_modules | head -30)",
+      "Bash(grep -r \"checkout.*steps\\\\|wizard.*steps\\\\|'shipping/address'\\\\|'billing/address'\\\\|'payment\\\\|'summary\" /Users/jd/tate/seo-technical-dev-expert/suitecommerce/extensions/LocalDistribution --include=\"*.js\" 2>/dev/null | head -50)",
+      "Bash(curl -sI -L --max-redirs 10 \"http://verocious.com\" 2>&1 | head -60)",
+      "Bash(find /Users/jd/tate/seo-technical-dev-expert/clients -type f -name *.md -o -name *.txt -o -name *.json)"
+    ],
+    "deny": [
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/credentials*)",
+      "Read(**/secrets*)",
+      "Edit(~/.ssh/**)",
+      "Edit(~/.aws/**)",
+      "Edit(~/.npmrc)",
+      "Edit(~/.env)",
+      "Edit(**/.env)",
+      "Edit(**/.env.*)",
+      "Edit(**/credentials*)",
+      "Edit(**/*.pem)",
+      "Edit(**/*.key)",
+      "Edit(**/*.pfx)",
+      "Bash(rm -rf *)",
+      "Bash(git push --force*)",
+      "Bash(git reset --hard*)",
+      "Bash(git clean -f*)"
+    ]
+  },
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -117,42 +170,6 @@
           }
         ]
       }
-    ]
-  },
-  "permissions": {
-    "allow": [
-      "Read(**)",
-      "Glob(**)",
-      "Grep(**)",
-      "Bash(git log*)",
-      "Bash(git status*)",
-      "Bash(git diff*)",
-      "Bash(git branch*)",
-      "Bash(ls *)",
-      "Bash(cat ~/.claude/settings.json)",
-      "Bash(python -m zipfile*)"
-    ],
-    "deny": [
-      "Read(~/.ssh/**)",
-      "Read(~/.aws/**)",
-      "Read(**/.env)",
-      "Read(**/.env.*)",
-      "Read(**/credentials*)",
-      "Read(**/secrets*)",
-      "Edit(~/.ssh/**)",
-      "Edit(~/.aws/**)",
-      "Edit(~/.npmrc)",
-      "Edit(~/.env)",
-      "Edit(**/.env)",
-      "Edit(**/.env.*)",
-      "Edit(**/credentials*)",
-      "Edit(**/*.pem)",
-      "Edit(**/*.key)",
-      "Edit(**/*.pfx)",
-      "Bash(rm -rf *)",
-      "Bash(git push --force*)",
-      "Bash(git reset --hard*)",
-      "Bash(git clean -f*)"
     ]
   }
 }
